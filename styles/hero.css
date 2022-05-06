@@ -90,6 +90,36 @@
 .circle-8 {
   top: 2rem;
   left: 0;
+  animation: scaleIn 1s infinite ease;
+}
+.circle-9 {
+  top: -12.4rem;
+  left: 31%;
+  animation: scaleIn 2s infinite ease;
+}
+.circle-10 {
+  top: -12.4rem;
+  left: 31%;
+  animation: scaleIn 3s infinite ease;
+}
+.circle-11 {
+  top: -12.4rem;
+  left: 31%;
+  animation: scaleIn 3s infinite ease;
+}
+.circle-12 {
+  bottom: 7.6rem;
+  left: 99%;
+  animation: scaleIn 1s infinite ease;
+}
+.circle-13 {
+  bottom: 7.6rem;
+  left: 99%;
+  animation: scaleIn 2s infinite ease;
+}
+.circle-14 {
+  bottom: 7.6rem;
+  left: 99%;
   animation: scaleIn 3s infinite ease;
 }
 .hero__img__circle i {
@@ -108,6 +138,14 @@
 .hero__img__circle #capsule {
   top: 7.4rem;
   left: 5.4rem;
+}
+.hero__img__circle #virus {
+  top: -7rem;
+  left: 40%;
+}
+.hero__img__circle #stethoscope {
+  bottom: 13rem;
+  right: -9rem;
 }
 @keyframes scaleIn {
   from {
