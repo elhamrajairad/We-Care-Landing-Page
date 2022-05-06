@@ -1,11 +1,12 @@
 :root {
   --white: #fcfcfc;
-  --primary-color: #014CCF;
-  --light-color: #fffafa;
-  --dark-color: #14141F;
+  --primary-color: #014ccf;
+  --light-color: #fff;
+  --dark-color: #102851;
   --gray-color: #7a7a7a;
+  --gray-color-2: #b4bdc9;
   --card-color: #343444;
-
+  --background-color: #e8f1ff;
 
   /* border-radius */
   --border-radius-xs: 0.5rem;

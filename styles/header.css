@@ -3,5 +3,41 @@
 @import "./reset.css";
 @import "./utility.css";
 
-
-
+#header {
+  min-height: 20%;
+  padding-top: 2rem;
+  background-color: #E8F1FF;
+}
+.header{
+  margin-top: 2rem;
+}
+.header__logo img {
+  width: 14rem;
+  vertical-align: middle;
+}
+.header__nav {
+  margin-right: auto;
+}
+.header__nav li {
+  margin: 0 1rem;
+}
+.header__nav a {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--dark-color);
+  transition: var(--transition);
+}
+.header__nav a:hover {
+  color: var(--primary-color);
+}
+.header__login .login a {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.header__login .login a:hover{
+    color: var(--primary-color);
+}
+.header__login .login .btn {
+  box-shadow: 0 0.4rem 1rem 0 #014ccf7a,0 0 0 0.2rem var(--primary-color) inset;;
+}

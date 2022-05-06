@@ -1,0 +1,43 @@
+@import "./buttons.css";
+@import "./colors.css";
+@import "./reset.css";
+@import "./utility.css";
+
+#subscribe {
+  min-height: 20%;
+  margin-top: 10rem;
+}
+.subscribe {
+  margin: 0 auto;
+  width: 60%;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 4rem;
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+}
+.subscribe h2 {
+  margin-top: 2rem;
+  font-size: 4rem;
+  line-height: 4.5rem;
+}
+.subscribe form {
+  border-radius: var(--border-radius-xs);
+  width: 50%;
+  background-color: #fff;
+  margin: 3rem auto;
+  padding: 0.5rem;
+}
+.subscribe form input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.subscribe form .btn {
+  background-color: var(--dark-color);
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.subscribe form .btn:hover {
+  background-color: transparent;
+}

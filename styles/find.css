@@ -1,0 +1,103 @@
+@import "./buttons.css";
+@import "./colors.css";
+@import "./reset.css";
+@import "./utility.css";
+#find {
+  max-height: 40%;
+  margin-top: 10rem;
+}
+.find__text,
+.find__img {
+  width: 100%;
+}
+.find__text__options {
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+.find__text__options i {
+  padding: 2%;
+  background-color: #d1d1f2;
+  color: #8a61e7;
+  border-radius: 50%;
+  align-self: flex-start;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.find__text__option {
+  margin: 2rem 0;
+  position: relative;
+  width: 59rem;
+}
+.find__text__option::before {
+  content: "";
+  width: 1px;
+  height: 90%;
+  background-color: rgba(219, 219, 219, 0.787);
+  top: 55%;
+  position: absolute;
+  left: 2rem;
+}
+.find__text__options span {
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.find__text > div > div:nth-child(2) > i {
+  color: #0049cb;
+  background-color: #e3ecfc;
+}
+.find__text > div > div:nth-child(3) > i {
+  color: #02dcbf;
+  background-color: #d6fdf9;
+}
+.find__img {
+  position: relative;
+}
+.find__img__form {
+  position: absolute;
+  padding: 2rem;
+  background: #fff;
+  border-radius: var(--border-radius-xs);
+  top: 11rem;
+  right: 48rem;
+  box-shadow: 0 0 4px 0 #ccc;
+}
+.find__img__form h3 {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.find__img__form form div {
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border-radius: var(--border-radius-xs);
+  vertical-align: bottom;
+  border: 1px solid #e1e1e1;
+}
+.find__img__form form div i {
+  color: var(--dark--color);
+  margin-right: 1rem;
+  font-weight: 600;
+}
+.find__img__form form input {
+  border: 0;
+  vertical-align: middle;
+}
+.find__img__form form button {
+  display: block;
+  border: 0;
+  outline: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  border-radius: var(--border-radius-xs);
+}
+.find__img__form form input::placeholder {
+  color: var(--gray-color);
+  opacity: 0.6;
+  font-weight: 500;
+  font-size: 1.5rem;
+}

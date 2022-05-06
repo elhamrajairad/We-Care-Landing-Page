@@ -1,0 +1,37 @@
+@import "./buttons.css";
+@import "./colors.css";
+@import "./reset.css";
+@import "./utility.css";
+
+#patient {
+  margin-top: 10rem;
+  max-height: 30%;
+  background-image: url('../assets/pattern.png');
+}
+.patient__testimonial__img img{
+    width:80%;
+    margin-bottom: -0.6rem;
+}
+.text p{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.testimonial__img img{
+    width: 8rem!important;
+    border-radius: var(--border-radius-m);
+}
+.text__star i{
+  color: orange;
+}
+.patient__testimonial__text {
+  border-radius: var(--border-radius-xs);
+  background-color: #fdfdfdb8;
+  padding: 2rem;
+}
+#patient h2{
+  color:var(--primary-colorّ);
+  padding-top: 5rem;
+}
+#patient p{
+  color: var(--primary-colorّ);
+}

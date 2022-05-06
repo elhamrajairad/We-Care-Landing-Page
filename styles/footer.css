@@ -1,0 +1,41 @@
+@import "./buttons.css";
+@import "./colors.css";
+@import "./reset.css";
+@import "./utility.css";
+
+#footer {
+  max-height: 30%;
+  margin-top: 10rem;
+  padding: 2rem 0;
+}
+.social__liks {
+  border-top: 0.5px solid #d8dde3;
+  padding: 1rem 0;
+  width: 10rem;
+  line-height: 3rem;
+}
+.social__liks i {
+  font-size: 2rem;
+}
+.social__liks i:hover{
+  color: var(--primary-color);
+}
+.footer__logo img {
+  width: 12rem;
+}
+.footer h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.footer ul {
+  line-height: 2.6rem;
+}
+.footer a {
+  color: var(--gray-color);
+  font-weight: 400;
+  transition: var(--transition);
+}
+.footer a:hover {
+  color: var(--primary-color);
+}

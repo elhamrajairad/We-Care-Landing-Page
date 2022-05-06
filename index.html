@@ -5,12 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/logo/WeCare.ico" type="image/x-icon">
     <!--icon fonts - start  -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!--icon fonts - end  -->
+    <!-- Link Swiper's CSS - start -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Link Swiper's CSS - end -->
     <!-- styles - start -->
     <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/search.css">
+    <link rel="stylesheet" href="./styles/popular.css">
+    <link rel="stylesheet" href="./styles/find.css">
+    <link rel="stylesheet" href="./styles/choose.css">
+    <link rel="stylesheet" href="./styles/specialist.css">
+    <link rel="stylesheet" href="./styles/patient.css">
+    <link rel="stylesheet" href="./styles/subscribe.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <!-- styles - end -->
     <title>We care</title>
 </head>
@@ -18,11 +30,510 @@
 <body>
     <header id="header">
         <div class="container">
-            <div class="header flex flex-direction-row justify-content-space-between">
-                <div></div>
+            <div class="header flex flex-direction-row justify-content-space-between gap-5">
+                <div class="header__logo">
+                    <img src="./assets/logo/WeCare-Logo.png" alt="we care logo">
+                </div>
+                <div class="header__nav">
+                    <ul class="flex flex-direction-row justify-content-space-around ">
+                        <li><a href="#">Find a Doctor</a></li>
+                        <li><a href="#">Find a Hospital</a></li>
+                        <li><a href="#">Health A to Z</a></li>
+                    </ul>
+                </div>
+                <div class="header__login">
+                    <div class="login flex flex-direction-row justify-content-space-around  gap-2">
+                        <a href="#">Login</a>
+                        <button class="btn">Sign in</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero flex flex-direction-row justify-content-space-around">
+                <div class="hero__text">
+                    <h1>Feel better about <br />
+                        finding healthcare
+                    </h1>
+                    <p>At healthgrades,we take the guesswork at of finding the right<br> doctors , hospotal and care
+                        for
+                        you and your family</p>
+                    <div class="hero__button flex flex-direction-row gap-2">
+                        <button class="btn__hero flex flex-direction-row justify-content-space-between">
+                            <img src="./assets/header/team.png" alt="users">
+                            <span>Profiles Every
+                                Doctors in America</span>
+                        </button>
+                        <button class="btn__hero flex flex-direction-row justify-content-space-between">
+                            <img src="./assets/header/rate.png" alt="rate">
+                            <span>More than 10 Milion rate Patien Rating</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero__img">
+                    <img src="./assets/header/header.png" alt="doctor">
+                    <div class="hero__img__circle">
+                        <span class="circle"></span>
+                        <span class="circle-2 circle"></span>
+                        <span class="circle-3 circle"></span>
+                        <span class="circle-4 circle"></span>
+                        <i class="ri-heart-pulse-line" id="heart"></i>
+                        <span class="circle-5 circle"></span>
+                        <span class="circle-6 circle"></span>
+                        <span class="circle-7 circle"></span>
+                        <span class="circle-8 circle"></span>
+                        <i class="ri-capsule-line" id="capsule"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
+    <main>
+        <section id="search-box">
+            <div class="container">
+                <div class="search-box">
+                    <div class="search-form">
+                        <form class="flex flex-direction-row  justify-content-space-between gap-2">
+                            <input type="text" name="doctor" placeholder="Search Doctor,Conditions or Prodecures">
+                            <input type="text" name="location" placeholder="Set your location">
+                            <button type="submit" class="btn">
+                                <i class="ri-search-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <h3>You may be loking for</h3>
+                    <div class="search__tag__items flex flex-direction-row .justify-content-flex-start gap-1">
+                        <div class="search__tag__item">
+                            <span>Family medicine</span>
+                            <i class="ri-close-fill"></i>
+                        </div>
+                        <div class="search__tag__item">
+                            <span>Pediatrie</span>
+                            <i class="ri-close-fill"></i>
+                        </div>
+                        <div class="search__tag__item">
+                            <span>Top Hospital</span>
+                            <i class="ri-close-fill"></i>
+                        </div>
+                        <div class="search__tag__item">
+                            <span>Telehealth</span>
+                            <i class="ri-close-fill"></i>
+                        </div>
+                        <div class="search__tag__item">
+                            <span>COVID-19</span>
+                            <i class="ri-close-fill"></i>
+                        </div>
+                        <div class="search__tag__item">
+                            <span>Orthopedic surgeon</span>
+                            <i class="ri-close-fill"></i>
+                        </div>
+                        <a href="#">More</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="popular">
+            <div class="container">
+                <h2 class="heading">Popular Searches on Wecare</h2>
+                <div class="pupular__tabs flex flex-direction-row">
+                    <div class="tabs flex flex-direction-column">
+                        <button class="tablinks active" onclick="openCity(event, 'London')"
+                            id="defaultOpen">Specialties</button>
+                        <button class="tablinks" onclick="openCity(event, 'Paris')">Condition</button>
+                        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Procedure</button>
+                    </div>
+                    <div class="pupular__tab">
+                        <div id="London" class="active tabcontent grid gap-2">
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/depilation.png" alt="tab one">
+                                <span>Dermatology</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/lungs.png" alt="tab two">
+                                <span>Internal Mdicine</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/brain.png" alt="tab three">
+                                <span>Neurosurgery</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/medicine.png" alt="tab three">
+                                <span>general medicine</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/molar-tooth.png" alt="tab three">
+                                <span>Dentisty</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/nose.png" alt="tab three">
+                                <span>Otolaryngology</span>
+                            </div>
+                        </div>
+
+                        <div id="Paris" class="active tabcontent grid gap-2">
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/medicine.png" alt="tab three">
+                                <span>general medicine</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/lungs.png" alt="tab two">
+                                <span>Internal Mdicine</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/depilation.png" alt="tab one">
+                                <span>Dermatology</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/molar-tooth.png" alt="tab three">
+                                <span>Dentisty</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/nose.png" alt="tab three">
+                                <span>Otolaryngology</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/brain.png" alt="tab three">
+                                <span>Neurosurgery</span>
+                            </div>
+                        </div>
+                        <div id="Tokyo" class="active tabcontent grid gap-2">
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/medicine.png" alt="tab three">
+                                <span>general medicine</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/molar-tooth.png" alt="tab three">
+                                <span>Dentisty</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/nose.png" alt="tab three">
+                                <span>Otolaryngology</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/depilation.png" alt="tab one">
+                                <span>Dermatology</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/lungs.png" alt="tab two">
+                                <span>Internal Mdicine</span>
+                            </div>
+                            <div class="images flex flex-direction-column justify-content-space-between">
+                                <img src="./assets/icon/brain.png" alt="tab three">
+                                <span>Neurosurgery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="find">
+
+            <div class="container">
+                <div class="find flex flex-direction-row justify-content-space-between gap-5">
+                    <div class="find__text">
+                        <h2 class="heading">
+                            Find the right doctor <br>right at your finger
+                        </h2>
+                        <p class="text-description">Wecare gives you the tools and inforamtion you need to</p>
+                        <div class="find__text__options flex flex-direction-column">
+                            <div class="find__text__option find flex flex-direction-row gap-2">
+                                <i class="ri-search-line"></i>
+                                <div>
+                                    <span>Search nearest Hospital</span>
+                                    <p class="text-description">It is a long established fact that a reader will be
+                                        distracted
+                                        by the readable
+                                        content of a page when looking at its layout</p>
+                                </div>
+                            </div>
+                            <div class="find__text__option flex flex-direction-row gap-2">
+                                <i class="ri-hospital-line"></i>
+                                <div>
+                                    <span>Appointment the best doctor</span>
+                                    <p class="text-description">It is a long established fact that a reader will be
+                                        distracted
+                                        by the readable
+                                        content of a page when looking at its layout</p>
+                                </div>
+                            </div>
+                            <div class=" find__text__option flex flex-direction-row gap-2">
+                                <i class="ri-phone-fill"></i>
+                                <div>
+                                    <span>Contact the doctor</span>
+                                    <p class="text-description">It is a long established fact that a reader will be
+                                        distracted
+                                        by the readable
+                                        content of a page when looking at its layout</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="find__img">
+                        <img src="./assets/find-doctor.png" alt="">
+                        <div class="find__img__form">
+                            <h3>Find the best doctor you need</h3>
+                            <form>
+                                <div class="flex flex-direction-row ">
+                                    <i class="ri-search-line"></i><input type="text" placeholder='Search doctor'>
+                                </div>
+                                <div class="flex flex-direction-roe">
+                                    <i class="ri-map-pin-line"></i><input type="text" placeholder='Set doctor'>
+                                </div>
+                                <button>
+                                    <i class="ri-search-line"></i>
+                                    Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="choose">
+            <div class="container">
+                <div class="choose flex flex-direction-row justify-content-space-center">
+                    <div class="choose__img">
+                        <img src="./assets/New Project (1).png" alt="doctor">
+                        <div class="choose__img__lists">
+                            <div class="choose__img__list">
+                                <a href="#" class="flex flex-direction-row justify-content-space-between gap-2">
+                                    <img src="./assets/DR/1.jpg" alt="doctor" width="75">
+                                    <p>DR Robert Fox</p>
+                                    <i class="ri-more-2-line"></i>
+                                </a>
+                                <a href="#" class="flex flex-direction-row justify-content-space-between gap-2">
+                                    <img src="./assets/DR/2.jpg" alt="doctor" width="75">
+                                    <p>Dr. Peter Parker</p>
+                                    <i class="ri-more-2-line"></i>
+                                </a>
+                                <a href="#" class="flex flex-direction-row justify-content-space-between gap-2">
+                                    <img src="./assets/DR/3.jpg" alt="doctor" width="75">
+                                    <p>Dr. Hooman Azmi</p>
+                                    <i class="ri-more-2-line"></i>
+                                </a>
+                                <a href="#" class="flex flex-direction-row justify-content-space-between gap-2">
+                                    <img src="./assets/DR/4.jpg" alt="doctor" width="75">
+                                    <p>Dr. Peter Parker</p>
+                                    <i class="ri-more-2-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose__text">
+                        <h3 class="heading">Why you choose <br>Wecare</h3>
+                        <p class="text-description">It is a long established fact that a reader will be distracted</p>
+                        <div class="choose__text__tick">
+                            <div> <i class="ri-check-line"></i><span>Eat Healthy, work better, do gardening.
+                                </span>
+                            </div>
+                            <div> <i class="ri-check-line"></i><span>Focus on the good things that you like</span>
+                            </div>
+                            <div> <i class="ri-check-line"></i><span>Eat Healthy, work better, do gardening.</span>
+                            </div>
+                            <div> <i class="ri-check-line"></i><span>Focus on the good things that you like</span>
+                            </div>
+                        </div>
+                        <button class="btn">Get Free Contact</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="specialist">
+            <div class="container">
+                <div class="specialist">
+                    <h2 class="heading text-align-center">Meet out specialist </h2>
+                    <p class="text-align-center text-description">Wecare gives you the tools and inforamtion you need to
+                    </p>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide flex flex-direction-column">
+                                <img src="./assets/list-doctor/1.jpg" alt="doctor" width="90%">
+                                <p>Dr.Veranda Tanumihardja</p>
+                                <span>Pulmonary</span>
+                            </div>
+                            <div class="swiper-slide flex flex-direction-column">
+                                <img src="./assets/list-doctor/2.jpg" alt="doctor" width="90%">
+                                <p>Dr. Kathryn Wood</p>
+                                <span>Pulmonary</span>
+                            </div>
+                            <div class="swiper-slide flex flex-direction-column">
+                                <img src="./assets/list-doctor/3.jpg" alt="doctor" width="90%">
+                                <p>Dr. Hooman Azmi</p>
+                                <span>Pulmonary</span>
+                            </div>
+                            <div class="swiper-slide flex flex-direction-column">
+                                <img src="./assets/list-doctor/4.jpg" alt="doctor" width="90%">
+                                <p>Dr. Peter Parker</p>
+                                <span>Pulmonary</span>
+                            </div>
+                            <div class="swiper-slide flex flex-direction-column">
+                                <img src="./assets/list-doctor/5.jpg" alt="doctor" width="90%">
+                                <p>Dr.Veranda Tanumihardja</p>
+                                <span>Pulmonary</span>
+                            </div>
+                            <div class="swiper-slide flex flex-direction-column">
+                                <img src="./assets/list-doctor/6.jpg" alt="doctor" width="90%">
+                                <p>Dr.Veranda Tanumihardja</p>
+                                <span>Pulmonary</span>
+                            </div>
+                            <div class="swiper-slide flex flex-direction-column">
+                                <img src="./assets/list-doctor/9.jpg" alt="doctor" width="90%">
+                                <p>Dr.Veranda Tanumihardja</p>
+                                <span>Pulmonary</span>
+                            </div>
+                            <div class="swiper-slide flex flex-direction-column">
+                                <img src="./assets/list-doctor/8.jpg" alt="doctor" width="90%">
+                                <p>Dr.Veranda Tanumihardja</p>
+                                <span>Pulmonary</span>
+                            </div>
+                            <div class="swiper-slide flex flex-direction-column">
+                                <img src="./assets/list-doctor/3.jpg" alt="doctor" width="90%">
+                                <p>Dr.Veranda Tanumihardja</p>
+                                <span>Pulmonary</span>
+                            </div>
+                            <div class="swiper-slide flex flex-direction-column">
+                                <img src="./assets/list-doctor/1.jpg" alt="doctor" width="90%">
+                                <p>Dr.Veranda Tanumihardja</p>
+                                <span>Pulmonary</span>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="patient">
+            <div class="container">
+                <h2 class="heading text-align-center">
+                    Our patientes Feedback about us
+                </h2>
+                <p class="text-align-center text-description">Latest up-to-date information from our public relation
+                    department.</p>
+                <div class="patient flex flex-direction-row justify-content-space-between">
+                    <div class="patient__testimonial__img">
+                        <img src="./assets/header-slide-img3.png" alt="patient">
+                    </div>
+                    <div class="patient__testimonial__text">
+                        <div class="item">
+                            <div class="testimonial__img flex flex-direction-row gap-2 ">
+                                <div class="image">
+                                    <img src="./assets/asian-woman-posing-looking-camera.jpg" alt="woman">
+                                </div>
+                                <div class="text">
+                                    <p>Rachel Williams
+                                    </p>
+                                    <span class="text-description">patient one</span>
+                                    <div class="text__star">
+                                        <i class="ri-star-s-fill"></i>
+                                        <i class="ri-star-s-fill"></i>
+                                        <i class="ri-star-s-fill"></i>
+                                        <i class="ri-star-s-fill"></i>
+                                        <i class="ri-star-s-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial__text text-description">
+                                <p>All the hospital staffs were very helpful. I really really appreciate all your
+                                    kindness
+                                    and good care you have provide me with. Thank you so much for your dedication!</p>
+                            </div>
+                        </div>
+                        <!-- <div class="item">
+                            <div class="testimonial__img flex flex-direction-row gap-2 ">
+                                <div class="image">
+                                    <img src="./assets/asian-woman-posing-looking-camera.jpg" alt="woman">
+                                </div>
+                                <div class="text">
+                                    <p>Rachel Williams
+                                    </p>
+                                    <span class="text-description">patient one</span>
+                                    <div class="text__star">
+                                        <i class="ri-star-s-fill"></i>
+                                        <i class="ri-star-s-fill"></i>
+                                        <i class="ri-star-s-fill"></i>
+                                        <i class="ri-star-s-fill"></i>
+                                        <i class="ri-star-s-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial__text text-description">
+                                <p>All the hospital staffs were very helpful. I really really appreciate all your
+                                    kindness
+                                    and good care you have provide me with. Thank you so much for your dedication!</p>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="subscribe">
+            <div class="container">
+                <div class="subscribe">
+                    <h2 class="heading text-align-center">subscribe for any news <br> update from Wecare</h2>
+                    <form class="flex flex-direction-row justify-content-space-between">
+                        <input type="email" placeholder="Enter your Eamil Address">
+                        <button class="btn">subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer flex flex-direction-row justify-content-space-between">
+                <div class="footer__logo">
+                    <img src="./assets/logo/WeCare-Logo.png" alt="logo wecare">
+                    <div class="social__liks">
+                        <i class="ri-facebook-box-fill"></i>
+                        <i class="ri-linkedin-box-fill"></i>
+                        <i class="ri-skype-fill"></i>
+                        <i class="ri-twitter-fill"></i>
+                        <i class="ri-youtube-fill"></i>
+                        <i class="ri-medium-fill"></i>
+                    </div>
+                </div>
+                <div class="footer__links1">
+                    <h3>For patient</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links2">
+                    <h3>For providers</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links3">
+                    <h3>For partner</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+
+                </div>
+                <div class="footer__links4">
+                    <h3>Our company</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 
 </html>

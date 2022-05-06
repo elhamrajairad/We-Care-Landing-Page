@@ -1,0 +1,65 @@
+@import "./buttons.css";
+@import "./colors.css";
+@import "./reset.css";
+@import "./utility.css";
+#choose {
+  max-height: 30%;
+  margin-top: 10rem;
+  background-color: var(--background-color);
+}
+.choose{
+  gap: 25rem;
+}
+.choose__text__tick {
+  margin: 2rem 0;
+}
+.choose__text__tick i {
+  border: 0.2rem solid var(--primary-color);
+  padding: 0.5%;
+  border-radius: 50%;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+.choose__text__tick div {
+  margin: 1.2rem 0;
+}
+.choose__text .btn {
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+.choose__img {
+  position: relative;
+}
+.choose__img__lists {
+  width: 24rem;
+  box-shadow: 0 0 2px 0 #cccc;
+  position: absolute;
+  top: 10%;
+  left: 40rem;
+  background-color: #e0e7fb;
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+}
+.choose__img__list {
+  width: 100%;
+}
+.choose__img__list img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.choose__img__list a {
+  padding: 1rem;
+  transition: var(--transition);
+}
+.choose__img__list a:hover {
+  background-color: var(--background-color);
+}
+.choose__img__list p {
+  font-size: 1.3rem;
+}
+.choose__img__list a i {
+  margin-left: auto;
+}
